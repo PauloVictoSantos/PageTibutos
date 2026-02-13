@@ -250,7 +250,7 @@ export const NavbarLogo = () => {
         height={40}
         className="bg-white rounded-full"
       />
-      <span className="font-medium text-black dark:text-white">Startup</span>
+      <span className="font-medium text-black dark:text-white">Tributos</span>
     </a>
   );
 };

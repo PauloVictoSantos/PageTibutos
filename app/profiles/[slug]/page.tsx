@@ -1,6 +1,6 @@
 import { profiles } from "@/lib/profiles"
 import { notFound } from "next/navigation"
-import ProfileHero from "@/components/perfil2"
+import ProfileHero from "@/components/profile"
 
 export default async function ProfilePage({ params }: any) {
   const { slug } = await params

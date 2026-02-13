@@ -11,29 +11,38 @@ import { FAQ } from "@/components/faq"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
 
 export const metadata: Metadata = {
-  title: 'Prefeitura Municipal de Presidente Figueiredo',
-  description: 'Portal oficial da Prefeitura Municipal de Presidente Figueiredo - Por Nossa Terra, Por Nossa Gente. Serviços, informações e atendimento ao cidadão.',
-  generator: 'Paulo victor',
+  title: {
+    default: 'Portal de Tributos | Prefeitura de Presidente Figueiredo',
+    template: '%s | Tributos Presidente Figueiredo'
+  },
+  description: 'Portal oficial da Secretaria de Finanças. Emissão de IPTU, Alvará, ISS, Certidões Negativas e orientações tributárias de Presidente Figueiredo - AM.',
+  generator: 'Paulo Victor',
+  keywords: ['Tributos', 'Presidente Figueiredo', 'IPTU', 'ISSQN', 'Alvará', 'SEMPLAF'],
+  authors: [{ name: 'Paulo Victor' }],
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: 'https://www.presidentefigueiredo.am.gov.br/wp-content/uploads/2021/01/cropped-LOGO-COLORIDA-PREFEITURA_-sem-fundo-150x150.png',
+        sizes: '32x32',
+        type: 'image/png',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: [
+      { 
+        url: 'https://www.presidentefigueiredo.am.gov.br/wp-content/uploads/2021/01/cropped-LOGO-COLORIDA-PREFEITURA_-sem-fundo-150x150.png', 
+        sizes: '180x180' 
+      }
+    ],
+  },
+  openGraph: {
+    title: 'Portal de Tributos - Presidente Figueiredo',
+    description: 'Regularize seus impostos, emita guias de IPTU e certidões online.',
+    images: ['https://www.presidentefigueiredo.am.gov.br/wp-content/uploads/2021/01/cropped-LOGO-COLORIDA-PREFEITURA_-sem-fundo-150x150.png'],
+    type: 'website',
   },
 }
 
@@ -43,11 +52,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-br">
-      <body className={`font-sans antialiased`}>
+    <html lang="pt-br" suppressHydrationWarning>
+      <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
           {children}
-
           <Services />
           <Schedule />
           <Documents />

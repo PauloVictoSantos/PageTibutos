@@ -25,11 +25,11 @@ export function Footer() {
           className="flex flex-col items-center text-center text-white"
         >
           <Image
-            src="/images/brasao-prefeitura.jpeg"
+            src="/images/brasao-prefeitura.png"
             alt="Brasão da Prefeitura Municipal de Presidente Figueiredo"
             width={100}
             height={100}
-            className="mb-4 h-20 w-20 object-contain"
+            className="mb-4 h-20 w-20 object-contain rounded-full bg-white"
           />
 
           <h3 className="mb-2 text-xl font-bold">
