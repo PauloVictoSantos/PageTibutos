@@ -21,7 +21,7 @@ type ProfileProps = {
 
 export default function ProfileHero({ data }: ProfileProps) {
   const employee = data;
-  const pdfUrl = "https://seusite.com/documents/CARTÃO DE VISITA.pdf";
+  const pdfUrl = "https://drive.google.com/file/d/1EIHKsUsrVKZs0IkvG9sY3KW4cl-ZzpA-/view?usp=drivesdk";
   return (
     <section
       id="perfil"
@@ -156,7 +156,7 @@ export default function ProfileHero({ data }: ProfileProps) {
             <Tooltip>
               <TooltipTrigger asChild>
                 <a
-                  href="https://instagram.com/prefeiturapresidentefigueiredo"
+                  href="https://www.instagram.com/prefeiturapresidentefigueiredo?igsh=MWs1azUzODg0MmVnZg=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="

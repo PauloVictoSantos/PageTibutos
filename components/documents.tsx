@@ -79,22 +79,21 @@ export function Documents() {
         </motion.div>
 
         <Tabs defaultValue="alvara">
-          <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 mb-10">
-            {tabs.map((tab) => {
-              const Icon = tab.icon;
-              return (
-                <TabsTrigger
-                  key={tab.value}
-                  value={tab.value}
-                  className="flex items-center gap-2 text-sm"
-                >
-                  <Icon className="h-4 w-4" />
-                  {tab.label}
-                </TabsTrigger>
-              );
-            })}
+          <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-5 mb-12 md:mb-10 h-auto bg-transparent md:bg-muted p-1">            {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <TabsTrigger
+                key={tab.value}
+                value={tab.value}
+                className="flex items-center gap-2 text-sm"
+              >
+                <Icon className="h-4 w-4" />
+                {tab.label}
+              </TabsTrigger>
+            );
+          })}
           </TabsList>
-          <div className="mt-10">
+          <div className="sm: mt-12">
             <TabsContent value="alvara">
               <Card className="shadow-sm">
                 <CardHeader>
