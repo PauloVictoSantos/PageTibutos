@@ -74,15 +74,3 @@ export const links = {
   nfse: "https://www.nfse.gov.br/EmissorNacional/Login?ReturnUrl=%2fEmissorNacional",
   maps: "https://www.google.com/maps/place/Prefeitura+Municipal+de+Presidente+Figueiredo/@-2.0333,-60.0167,17z",
 }
-
-export const people = [
-  {
-    slug: "melry",
-    name: "Melry Santos",
-    role: "Assistente Administrativo",
-    department: "Secretaria de Planejamento e Finanças - SEMPLAF",
-    photo: "/placeholder-user.jpg",
-    whatsapp: "https://wa.me/5592999999999",
-    email: "melry.santos@presidentefigueiredo.am.gov.br",
-  },
-]
